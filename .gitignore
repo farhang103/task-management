@@ -36,12 +36,3 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-# Sentry
-.sentryclirc
-
-# Sentry
-next.config.original.js
-
-# Sentry
-next.config.wizardcopy.js
