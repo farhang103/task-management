@@ -1,0 +1,44 @@
+@import "../../../styles/utils";
+
+.boardTitleBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  @include media(">tablet") {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.on {
+    .icon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--theme-title-color);
+
+    @include media(">tablet") {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include media(">desktop") {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .icon {
+    transition: transform 0.3s;
+
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+}

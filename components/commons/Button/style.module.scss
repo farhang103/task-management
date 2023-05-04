@@ -1,0 +1,89 @@
+@import "styles/utils";
+
+.button {
+  min-width: 174px;
+  min-height: 40px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 23px;
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+
+  @include media(">desktop") {
+    transition: background 0.3s;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+
+  &.primary {
+    color: var(--theme-white-color);
+    background: var(--theme-primary-color);
+
+    @include media(">desktop") {
+      &:not(&:disabled):hover {
+        background: var(--theme-primary-highlight-color);
+      }
+    }
+  }
+
+  &.secondary {
+    color: var(--theme-primary-color);
+    background: var(--theme-secondary-color);
+
+    @include media(">desktop") {
+      &:not(&:disabled):hover {
+        background: var(--theme-secondary-highlight-color);
+      }
+    }
+  }
+
+  &.danger {
+    color: var(--theme-white-color);
+    background: var(--theme-danger-color);
+
+    @include media(">desktop") {
+      &:not(&:disabled):hover {
+        background: var(--theme-danger-highlight-color);
+      }
+    }
+  }
+
+  &.round {
+    min-height: 48px;
+    font-size: 15px;
+    line-height: 19px;
+    border-radius: 24px;
+  }
+
+  &.mobileIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 32px;
+
+    .content {
+      display: none;
+
+      @include media(">tablet") {
+        min-width: 164px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .icon {
+
+      @include media(">tablet") {
+        display: none;
+      }
+    }
+  }
+}

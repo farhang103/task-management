@@ -1,0 +1,91 @@
+
+.select {
+  position: relative;
+
+  &.open {
+    &::before {
+      transform: rotate(-180deg);
+    }
+
+    .input {
+      outline: 1px solid var(--theme-primary-color);
+      border-color: transparent;
+    }
+
+    .overlay {
+      display: block;
+    }
+
+    .listWrapper {
+      max-height: 999px;
+      transition: max-height 0.8s;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 18.55px;
+    right: 15.8px;
+    width: 10px;
+    height: 6px;
+    background: url("/icons/icon-chevron-down.svg") no-repeat;
+    content: "";
+    transition: transform 0.3s;
+  }
+
+  .input {
+    width: 100%;
+    min-height: 40px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    color: var(--theme-title-color);
+    background: var(--theme-box-color);
+    border: 1px solid rgba(130, 143, 163, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 16px 9px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  .listWrapper {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--theme-float-box-color);
+    box-shadow: 0px 10px 20px rgba(54, 78, 126, 0.25);
+    border-radius: 8px;
+    transition: max-height 0.3s;
+
+    .list {
+      list-style: none;
+
+      .item {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 23px;
+        padding: 8px 16px;
+        cursor: pointer;
+
+        &:first-child {
+          padding-top: 16px;
+        }
+
+        &:last-child {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "styles/utils";
+
+.header {
+  position: relative;
+  padding: 16px 0;
+  background: var(--theme-box-color);
+  z-index: 1;
+
+  &.sidebar {
+    .logo {
+
+      @include media(">tablet") {
+        display: none;
+      }
+    }
+
+    .divider {
+      display: none !important;
+    }
+  }
+
+  @include media(">tablet") {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    padding: 0;
+    border-bottom: 1px solid var(--theme-line-color);
+  }
+
+  @include media(">desktop") {
+    min-height: 97px;
+    padding-right: 8px;
+  }
+
+  .container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .leftSide {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include media(">tablet") {
+        gap: 24px;
+      }
+
+      .divider {
+        display: none;
+
+        @include media(">tablet") {
+          display: block;
+          width: 1px;
+          height: 100%;
+          background: var(--theme-line-color);
+          border: 0;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include media(">tablet") {
+        gap: 24px;
+      }
+    }
+  }
+}

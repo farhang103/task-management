@@ -1,0 +1,49 @@
+@import '~include-media/dist/include-media';
+
+$breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
+
+.light {
+  --theme-black-color: 0, 1, 18;
+  --theme-light-grey-color: #F4F7FD;
+  --theme-dark-grey-color: #2B2C37;
+  --theme-medium-grey-color: #828FA3;
+  --theme-white-color: #FFFFFF;
+  --theme-primary-color: #635FC7;
+  --theme-primary-highlight-color: #A8A4FF;
+  --theme-secondary-color: rgba(99, 95, 199, 0.1);
+  --theme-secondary-highlight-color: rgba(99, 95, 199, 0.25);
+  --theme-natural-color: var(--theme-medium-grey-color);
+  --theme-danger-color: #EA5555;
+  --theme-danger-highlight-color: #FF9898;
+  --theme-title-color: rgb(var(--theme-black-color));
+  --theme-title-rgb-color: var(--theme-black-color);
+  --theme-background-color: var(--theme-light-grey-color);
+  --theme-box-color: var(--theme-white-color);
+  --theme-float-box-color: var(--theme-white-color);
+  --theme-line-color: #E4EBFA;
+  --theme-gradient-color: linear-gradient(180deg, #E9EFFA 0%, rgba(233, 239, 250, 0.5) 100%);
+  --theme-checkbox-highlight-color: rgba(99, 95, 199, 0.25);
+}
+
+.dark {
+  --theme-black-color: #000112;
+  --theme-very-dark-grey-color: #20212C;
+  --theme-dark-grey-color: #2B2C37;
+  --theme-medium-grey-color: #828FA3;
+  --theme-white-color: #FFFFFF;
+  --theme-primary-color: #635FC7;
+  --theme-primary-highlight-color: #A8A4FF;
+  --theme-secondary-color: #FFFFFF;
+  --theme-secondary-highlight-color: #FFFFFF;
+  --theme-natural-color: var(--theme-medium-grey-color);
+  --theme-danger-color: #EA5555;
+  --theme-danger-highlight-color: #FF9898;
+  --theme-title-color: var(--theme-white-color);
+  --theme-title-rgb-color: 255, 255, 255;
+  --theme-background-color: var(--theme-very-dark-grey-color);
+  --theme-box-color: var(--theme-dark-grey-color);
+  --theme-float-box-color: var(--theme-very-dark-grey-color);
+  --theme-line-color: #3E3F4E;
+  --theme-gradient-color: linear-gradient(180deg, rgba(43, 44, 55, 0.25) 0%, rgba(43, 44, 55, 0.125) 100%);
+  --theme-checkbox-highlight-color: rgba(99, 95, 199, 0.25);
+}

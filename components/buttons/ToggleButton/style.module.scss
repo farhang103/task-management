@@ -1,0 +1,39 @@
+@import "styles/utils";
+
+.toggleButton {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 20px;
+  background: var(--theme-primary-color);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+
+  @include media(">desktop") {
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--theme-primary-highlight-color);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    left: 0;
+    background: var(--theme-white-color);
+    border-radius: 50%;
+    content: "";
+    transition: transform 0.3s;
+    transform: translateX(3px);
+  }
+
+  &.on {
+    &::before {
+      transform: translateX(calc(40px - 14px - 3px));
+    }
+  }
+}

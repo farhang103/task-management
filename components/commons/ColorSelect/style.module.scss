@@ -1,0 +1,42 @@
+
+.colorSelect {
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  &.open {
+    .overlay {
+      display: block;
+    }
+
+    .colorPicker {
+      display: block;
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 1;
+  }
+
+  .colorChip {
+    width: 20px;
+    height: 20px;
+    background: var(--theme-white-color);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .colorPicker {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: -10px;
+    z-index: 2;
+  }
+}

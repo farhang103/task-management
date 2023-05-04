@@ -1,0 +1,54 @@
+@import "styles/utils";
+
+.checkBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--theme-title-color);
+  background: var(--theme-background-color);
+  border-radius: 4px;
+  padding: 13px 8px 16px 12px;
+  cursor: pointer;
+
+  @include media(">desktop") {
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--theme-checkbox-highlight-color);
+    }
+  }
+
+  &.checked {
+    color: var(--theme-natural-color);
+    text-decoration: line-through;
+
+    .input {
+      position: relative;
+      background: var(--theme-primary-color);
+      border-color: var(--theme-primary-color);
+
+      &::before {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("/icons/icon-check.svg") no-repeat center;
+        content: "";
+      }
+    }
+  }
+
+  .input {
+    min-width: 16px;
+    min-height: 16px;
+    background: var(--theme-white-color);
+    border: 1px solid rgba(130, 143, 163, 0.248914);
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../styles/utils";
+
+.newColumnBox {
+  height: 100%;
+  max-height: 814px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  background: var(--theme-gradient-color);
+  border-radius: 6px;
+  margin-top: 63px;
+  cursor: pointer;
+
+  @include media(">desktop") {
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--theme-primary-color);
+
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../styles/utils";
+
+.taskForm {
+
+  .subtaskColumnsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & > label {
+      margin-bottom: 0;
+    }
+  }
+
+  .subtaskList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+
+    .subtaskItem {
+      display: flex;
+      gap: 16px;
+
+      .input {
+        flex: 1;
+      }
+
+      .removeButton {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+
+        @include media(">desktop") {
+          svg path {
+            transition: fill 0.3s;
+          }
+
+          &:hover {
+            svg path {
+              fill: var(--theme-danger-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

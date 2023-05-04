@@ -1,0 +1,33 @@
+@import "styles/utils";
+
+.main {
+  width: 100vw;
+  min-height: 667px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+
+    @include media(">tablet") {
+      flex-direction: row;
+    }
+
+    .content {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .cardColumnListContainer {
+      height: calc(100vh - 64px);
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "styles/utils";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &.danger {
+    .title {
+      color: var(--theme-danger-color) !important;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--theme-title-color);
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media(">tablet") {
+      flex-direction: row;
+
+      & > * {
+        flex: 1;
+      }
+    }
+  }
+}

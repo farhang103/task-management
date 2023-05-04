@@ -1,0 +1,53 @@
+@import "styles/utils";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 100vh;
+  overflow: scroll;
+
+  &.open {
+    display: flex;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    opacity: 0.5;
+  }
+
+  .container {
+    flex: 1;
+    padding: 0 16px;
+    margin: auto;
+    max-width: 480px;
+
+    @include media(">tablet") {
+      padding: 0;
+    }
+  }
+
+  .box {
+    position: relative;
+    width: 100%;
+    background: var(--theme-box-color);
+    border-radius: 6px;
+    padding: 24px;
+
+    @include media(">tablet") {
+      min-height: 229px;
+      padding: 32px;
+    }
+  }
+}
