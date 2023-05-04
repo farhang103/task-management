@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Product task management app solution
 
-## Getting Started
+## Table of contents
 
-First, run the development server:
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+-   [My process](#my-process)
+    -   [Screenshot](#screenshot)
+    -   [Built with](#built-with)
+    -   [Demo](#demo)
+-   [Author](#author)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### The challenge
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Users can be able to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+-   View the optimal layout for the app depending on their device's screen size
+-   See hover states for all interactive elements on the page
+-   Create, read, update, and delete boards and tasks
+-   Receive form validations when trying to create/edit boards and tasks
+-   Mark subtasks as complete and move tasks between columns
+-   Hide/show the board sidebar
+-   Toggle the theme between light/dark modes
+-   Bonus: Allow users to drag and drop tasks to change their status and re-order them in a column
+-   Bonus: Keep track of any changes, even after refreshing the browser
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Screenshot
 
-## Learn More
+![](./public/screenshot.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+## My process
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Built with
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
+-   Mobile-first workflow
+-   [Sass](https://sass-lang.com//) - For styles
+-   [React](https://reactjs.org/) - JS library
+-   [Zustand](https://zustand-demo.pmnd.rs/) - React library
+-   [Next.js](https://nextjs.org/) - React meta-framework
 
-## Deploy on Vercel
+### Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   Live Site URL:(https://task-management-5wek4lq0x-farhang103.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+-   Linkedin - [Farhang Alizadeh](https://www.linkedin.com/in/farhang-alizadeh-3bb232235/)
